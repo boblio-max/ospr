@@ -1,0 +1,44 @@
+def bhaskaraI_smethod(x) {
+    let c_pi = 3.141592653589793
+    if (x < 0) {
+        return -bhaskaraI_smethod(-x)
+    }
+    if (x > c_pi) {
+        let c_2pi = 2 * c_pi
+        let nx = x % c_2pi
+        if (nx > c_pi) {
+            return -bhaskaraI_smethod(c_2pi - nx)
+        }
+        let denom = 5 * (c_pi * c_pi) - 4 * nx * (c_pi - nx)
+        let base = (16 * nx) * (c_pi - nx) / denom
+        let correction = 0.00001343 * nx * (c_pi - nx) * (nx - c_pi / 2) ** 2
+        return base + correction
+    }
+    let denom = 5 * (c_pi * c_pi) - 4 * x * (c_pi - x)
+    let base = (16 * x) * (c_pi - x) / denom
+    let correction = 0.00001343 * x * (c_pi - x) * (x - c_pi / 2) ** 2
+    return base + correction
+}
+def bhaskaraI_cmethod(x) {
+    let c_pi = 3.141592653589793
+    return bhaskaraI_smethod(c_pi / 2 - x)
+}
+def ospr_seesaw_method(angle: float, delta_r:float) {
+    let half_length:float = half_length_calculations(angle, delta_r)
+    let height_1:float = half_length * bhaskaraI_smethod(angle)
+    let height_2:float = half_length * bhaskaraI_cmethod(angle)
+    print f"{height_1} {height_2}"
+}
+
+def half_length_calculations(angle: float, delta_r: float) {
+    let c_pi:float = 3.141592653589793
+    let r_min:float = 0.1
+    let r_range:float = 0.9
+    let x:float = abs(angle) / c_pi
+    let x2:float = x * x
+    let cubic:float = x2 * (3 - 2 * x)
+
+    return r_min + r_range * cubic + delta_r
+}
+
+ospr_seesaw_method(0.7, 5)
