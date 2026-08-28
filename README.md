@@ -1,6 +1,7 @@
-# OSPR — Oscillating Seesaw Polar Representation
+# OSPR — Opposite Seesaw Parameter Reduction Method
 
-> **Compress every 2 weights into 1 angle.** A `2:1` polar encoding for neural network weights using a smoothstep half-length and a 7th-century Bhaskara I sine approximation — fully differentiable in PyTorch.
+> **OSPR = Opposite Seesaw Parameter Reduction Method** — compress every 2 weights into 1 angle.
+> A `2:1` polar encoding for neural network weights using a smoothstep half-length and a 7th-century Bhaskara I sine approximation — fully differentiable in PyTorch.
 
 ```
 (w0, w1)  ──►  (theta, R)  ──►  (theta) + 2 params/layer  ──►  reconstruct (w0, w1)

@@ -5,7 +5,7 @@ build-backend = "setuptools.build_meta"
 [project]
 name = "ospr"
 version = "0.1.0"
-description = "Oscillating Seesaw Polar Representation — 2:1 weight compression via polar (theta, half-length) encoding with Bhaskara I trig approximation"
+description = "Opposite Seesaw Parameter Reduction Method — 2:1 weight compression via polar (theta, half-length) encoding with Bhaskara I trig approximation"
 readme = "README.md"
 license = { text = "MIT" }
 requires-python = ">=3.9"

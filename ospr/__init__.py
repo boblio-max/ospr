@@ -1,5 +1,5 @@
 """
-ospr — Oscillating Seesaw Polar Representation library.
+ospr — Opposite Seesaw Parameter Reduction Method library.
 
 Pure-Python core in :mod:`ospr.core`, PyTorch layers in :mod:`ospr.torch`.
 
