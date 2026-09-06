@@ -1,3 +1,0 @@
-include README.md
-include ospr_method.or
-recursive-include ospr *.py
