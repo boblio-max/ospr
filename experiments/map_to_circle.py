@@ -1,6 +1,5 @@
 import math
 
-
 def number_to_polar(x):
     theta = 2 * math.pi * (x - math.floor(x))
     radius = abs(x)
@@ -17,5 +16,4 @@ def circle_to_number(px, py):
         theta += 2 * math.pi
 
     x = theta / (2 * math.pi)
-
     return x
